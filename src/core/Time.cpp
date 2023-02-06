@@ -91,8 +91,8 @@ std::string Time::strftime(const char *format)
     (void)_localtime64_s(&timeNowData, &timeNow);
 #else
     std::time_t timeNow = std::time(nullptr);
-    (void)localtime_s(&timeNowData, &timeNow);
-    //(void)localtime_r(&timeNow, &timeNowData);
+    //(void)localtime_s(&timeNowData, &timeNow);
+    (void)localtime_r(&timeNow, &timeNowData);
 #endif /* _MSC_VER */
 
     // Format tm structure to the string buffer.
