@@ -39,8 +39,8 @@ void HeightMapPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "Modifiers",
                               "Modifiers",
-                              tr("Height Map"),
-                              tr("Compute height map"),
+                              tr("高度图"),
+                              tr("计算高度图"),
                               ICON("height_map"),
                               this,
                               SLOT(slotPlugin()));

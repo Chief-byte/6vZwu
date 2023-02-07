@@ -30,7 +30,7 @@
 #include <QString>
 #include <QWidget>
 
-#define PLUGIN_HEIGHT_MAP_NAME "Heightmap"
+#define PLUGIN_HEIGHT_MAP_NAME "高度图"
 #define PLUGIN_HEIGHT_MAP_COLORMAP_MATLAB_JET "Matlab Jet"
 #define PLUGIN_HEIGHT_MAP_COLORMAP_VTK "VTK"
 #define PLUGIN_HEIGHT_MAP_COLORMAP_GRAY "Gray"
@@ -200,7 +200,7 @@ void HeightMapModifier::apply(QWidget *widget)
     int maximum = static_cast<int>(query.pageSizeEstimate());
 
     QProgressDialog progressDialog(widget);
-    progressDialog.setCancelButtonText(QObject::tr("&Cancel"));
+    progressDialog.setCancelButtonText(QObject::tr("&取消"));
     progressDialog.setRange(0, maximum);
     progressDialog.setWindowTitle(QObject::tr(PLUGIN_HEIGHT_MAP_NAME));
     progressDialog.setWindowModality(Qt::WindowModal);
@@ -212,7 +212,7 @@ void HeightMapModifier::apply(QWidget *widget)
         // Update progress i
         progressDialog.setValue(i + 1);
         progressDialog.setLabelText(
-            QObject::tr("Processing %1 of %n...", nullptr, maximum).arg(i + 1));
+            QObject::tr("正在处理 %1 的 %n...", nullptr, maximum).arg(i + 1));
 
         QCoreApplication::processEvents();
         if (progressDialog.wasCanceled())

@@ -46,9 +46,9 @@ DensityWindow::DensityWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Radius"),
-                         tr("Radius"),
-                         tr("pt"),
+                         tr("半径"),
+                         tr("半径"),
+                         tr("点"),
                          1,
                          10,
                          1000,
@@ -60,7 +60,7 @@ DensityWindow::DensityWindow(MainWindow *mainWindow)
     settingsLayout->addStretch();
 
     // Buttons
-    applyButton_ = new QPushButton(tr("Compute"));
+    applyButton_ = new QPushButton(tr("计算"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     connect(applyButton_, SIGNAL(clicked()), this, SLOT(slotApply()));
 
@@ -78,7 +78,7 @@ DensityWindow::DensityWindow(MainWindow *mainWindow)
 
     // Dialog
     setLayout(mainLayout);
-    setWindowTitle(tr("Density"));
+    setWindowTitle(tr("密度"));
     setWindowIcon(ICON("density"));
     setMaximumHeight(height());
     setModal(true);

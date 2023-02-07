@@ -40,8 +40,8 @@ void DensityPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "Utilities",
                               "Utilities",
-                              tr("Density"),
-                              tr("Compute density around each point"),
+                              tr("密度"),
+                              tr("计算每个点周围的密度"),
                               ICON("density"),
                               this,
                               SLOT(slotPlugin()));

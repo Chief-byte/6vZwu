@@ -43,8 +43,8 @@ void ExportFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&exportFileAction_,
                               "File",
                               "File Import/Export",
-                              tr("Export..."),
-                              tr("Export point cloud"),
+                              tr("导出..."),
+                              tr("导出点云"),
                               ICON("export_file"),
                               this,
                               SLOT(slotExportFile()));

@@ -28,7 +28,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 
-#define PROJECT_FILE_PLUGIN_FILTER_PRJ "3DForest Project (*.json)"
+#define PROJECT_FILE_PLUGIN_FILTER_PRJ "3DForest 项目 (*.json)"
 #define ICON(name) (ThemeIcon(":/projectfile/", name))
 
 ProjectFilePlugin::ProjectFilePlugin() : mainWindow_(nullptr)
@@ -42,8 +42,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&actionProjectNew_,
                               "File",
                               "File Project",
-                              tr("&New Project"),
-                              tr("Create new project"),
+                              tr("&新项目"),
+                              tr("创建新项目"),
                               ICON("create"),
                               this,
                               SLOT(slotProjectNew()));
@@ -51,8 +51,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&actionProjectOpen_,
                               "File",
                               "File Project",
-                              tr("&Open Project..."),
-                              tr("Open new project"),
+                              tr("&打开项目..."),
+                              tr("打开新项目"),
                               ICON("opened_folder"),
                               this,
                               SLOT(slotProjectOpen()));
@@ -60,8 +60,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&actionProjectSave_,
                               "File",
                               "File Project",
-                              tr("&Save Project"),
-                              tr("Save project"),
+                              tr("&保存项目"),
+                              tr("保存项目"),
                               ICON("save"),
                               this,
                               SLOT(slotProjectSave()));
@@ -69,8 +69,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&actionProjectSaveAs_,
                               "File",
                               "File Project",
-                              tr("Save Project &As..."),
-                              tr("Save project as"),
+                              tr("将项目&另存为..."),
+                              tr("将项目另存为"),
                               ICON("save_as"),
                               this,
                               SLOT(slotProjectSaveAs()));
@@ -91,7 +91,7 @@ void ProjectFilePlugin::slotProjectOpen()
     QString fileName;
 
     fileName = QFileDialog::getOpenFileName(mainWindow_,
-                                            tr("Open Project"),
+                                            tr("打开项目"),
                                             "",
                                             tr(PROJECT_FILE_PLUGIN_FILTER_PRJ));
 
@@ -113,7 +113,7 @@ void ProjectFilePlugin::slotProjectSaveAs()
     QString fileName;
 
     fileName = QFileDialog::getSaveFileName(mainWindow_,
-                                            tr("Save Project As"),
+                                            tr("将项目另存为"),
                                             "",
                                             tr(PROJECT_FILE_PLUGIN_FILTER_PRJ));
 
@@ -220,7 +220,7 @@ bool ProjectFilePlugin::projectSave(const QString &path)
 
             fileName = QFileDialog::getSaveFileName(
                 mainWindow_,
-                tr("Save As"),
+                tr("另存为"),
                 "",
                 tr(PROJECT_FILE_PLUGIN_FILTER_PRJ));
 

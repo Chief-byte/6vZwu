@@ -47,7 +47,7 @@ ProgressDialog::ProgressDialog(MainWindow *mainWindow, const char *title)
     // Custom progress bar allows to display percentage with fractional part.
     setWindowTitle(QObject::tr(title));
     setWindowModality(Qt::WindowModal);
-    setCancelButtonText(QObject::tr("&Cancel"));
+    setCancelButtonText(QObject::tr("&取消"));
     setMinimumDuration(0);
 
     QProgressBar *progressBar = new QProgressBar(this);

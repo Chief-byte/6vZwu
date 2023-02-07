@@ -49,7 +49,7 @@ void HelpPlugin::slotAbout()
 {
     QMessageBox::about(
         mainWindow_,
-        tr("About 3D Forest, version ") + MainWindow::APPLICATION_VERSION,
+        tr("关于 3D Forest 版本") + MainWindow::APPLICATION_VERSION,
         tr("3D Forest is software for analysis of Lidar data from forest"
            " environment.\n"
            "\n"

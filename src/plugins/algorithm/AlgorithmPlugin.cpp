@@ -39,8 +39,8 @@ void AlgorithmPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "File",
                               "File Properties",
-                              tr("Algorithm"),
-                              tr("Run an algorithm"),
+                              tr("算法"),
+                              tr("运行算法"),
                               ICON("algorithm"),
                               this,
                               SLOT(slotPlugin()));

@@ -42,8 +42,8 @@ void ClassificationPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "Utilities",
                               "Utilities",
-                              tr("Classification"),
-                              tr("Classify points to ground and unassigned"),
+                              tr("分类"),
+                              tr("分类点到地面和未分配的点"),
                               ICON("soil"),
                               this,
                               SLOT(slotPlugin()));

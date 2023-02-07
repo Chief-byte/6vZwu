@@ -50,31 +50,31 @@ ExportFileDialog::ExportFileDialog(MainWindow *mainWindow,
     fileNameLineEdit_ = new QLineEdit;
     fileNameLineEdit_->setText(fileName);
 
-    browseButton_ = new QPushButton(tr("Browse"));
+    browseButton_ = new QPushButton(tr("浏览"));
     connect(browseButton_, SIGNAL(clicked()), this, SLOT(slotBrowse()));
 
     QHBoxLayout *fileNameLayout = new QHBoxLayout;
-    fileNameLayout->addWidget(new QLabel(tr("File")));
+    fileNameLayout->addWidget(new QLabel(tr("文件")));
     fileNameLayout->addWidget(fileNameLineEdit_);
     fileNameLayout->addWidget(browseButton_);
 
     // Attributes
     attributeCheckBox_.resize(5);
 
-    attributeCheckBox_[0] = new QCheckBox(tr("XYZ coordinates"));
+    attributeCheckBox_[0] = new QCheckBox(tr("XYZ坐标"));
     attributeCheckBox_[0]->setChecked(true);
     attributeCheckBox_[0]->setEnabled(false);
 
-    attributeCheckBox_[1] = new QCheckBox(tr("Intensity"));
+    attributeCheckBox_[1] = new QCheckBox(tr("强度"));
     attributeCheckBox_[1]->setChecked(true);
 
-    attributeCheckBox_[2] = new QCheckBox(tr("Classification"));
+    attributeCheckBox_[2] = new QCheckBox(tr("分类"));
     attributeCheckBox_[2]->setChecked(true);
 
-    attributeCheckBox_[3] = new QCheckBox(tr("Color"));
+    attributeCheckBox_[3] = new QCheckBox(tr("颜色"));
     attributeCheckBox_[3]->setChecked(true);
 
-    attributeCheckBox_[4] = new QCheckBox(tr("Layer"));
+    attributeCheckBox_[4] = new QCheckBox(tr("层"));
     attributeCheckBox_[4]->setChecked(true);
 
     QVBoxLayout *attributeVBoxLayout = new QVBoxLayout;
@@ -83,7 +83,7 @@ ExportFileDialog::ExportFileDialog(MainWindow *mainWindow,
         attributeVBoxLayout->addWidget(attributeCheckBox_[i]);
     }
 
-    QGroupBox *attributeGroupBox = new QGroupBox(tr("Point attributes"));
+    QGroupBox *attributeGroupBox = new QGroupBox(tr("点属性"));
     attributeGroupBox->setLayout(attributeVBoxLayout);
 
     // Other options
@@ -99,16 +99,16 @@ ExportFileDialog::ExportFileDialog(MainWindow *mainWindow,
     filterEnabledCheckBox_->setChecked(true);
 
     QGridLayout *valueGridLayout = new QGridLayout;
-    valueGridLayout->addWidget(new QLabel(tr("Scale")), 0, 0);
+    valueGridLayout->addWidget(new QLabel(tr("规模")), 0, 0);
     valueGridLayout->addWidget(scaleComboBox_, 0, 1);
-    valueGridLayout->addWidget(new QLabel(tr("Use current filter")), 1, 0);
+    valueGridLayout->addWidget(new QLabel(tr("使用当前过滤器")), 1, 0);
     valueGridLayout->addWidget(filterEnabledCheckBox_, 1, 1);
 
     // Buttons
-    acceptButton_ = new QPushButton(tr("Export"));
+    acceptButton_ = new QPushButton(tr("导出"));
     connect(acceptButton_, SIGNAL(clicked()), this, SLOT(slotAccept()));
 
-    rejectButton_ = new QPushButton(tr("Cancel"));
+    rejectButton_ = new QPushButton(tr("取消"));
     connect(rejectButton_, SIGNAL(clicked()), this, SLOT(slotReject()));
 
     QHBoxLayout *dialogButtons = new QHBoxLayout;
@@ -129,7 +129,7 @@ ExportFileDialog::ExportFileDialog(MainWindow *mainWindow,
     setLayout(dialogLayout);
 
     // Window
-    setWindowTitle(tr("Export File"));
+    setWindowTitle(tr("导出文件"));
     setWindowIcon(ICON("export_file"));
     setMaximumWidth(600);
     setMaximumHeight(height());
@@ -144,10 +144,10 @@ void ExportFileDialog::slotBrowse()
 
     QString fileName =
         QFileDialog::getSaveFileName(mainWindow_,
-                                     tr("Export File As"),
+                                     tr("导出文件为"),
                                      fileNameLineEdit_->text(),
-                                     tr("LAS (LASer) File (*.las);;"
-                                        "Comma Separated Values (*.csv)"),
+                                     tr("LAS (LASer) 文件 (*.las);;"
+                                        "逗号分隔文件 (*.csv)"),
                                      &selectedFilter,
                                      options);
 
@@ -166,8 +166,8 @@ void ExportFileDialog::slotAccept()
     if (path.isEmpty())
     {
         (void)QMessageBox::information(this,
-                                       tr("Export File"),
-                                       tr("Please choose a file name."));
+                                       tr("导出文件"),
+                                       tr("请选择一个文件名。"));
         return;
     }
 
@@ -176,8 +176,8 @@ void ExportFileDialog::slotAccept()
         QMessageBox::StandardButton reply;
 
         reply = QMessageBox::question(this,
-                                      tr("Export File"),
-                                      tr("Overwrite existing file?"),
+                                      tr("导出文件"),
+                                      tr("覆盖现有文件？"),
                                       QMessageBox::Yes | QMessageBox::No);
 
         if (reply != QMessageBox::Yes)

@@ -42,8 +42,8 @@ void DescriptorPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "Utilities",
                               "Utilities",
-                              tr("Descriptor"),
-                              tr("Compute descriptor of each point"),
+                              tr("描述符"),
+                              tr("计算每个点的描述符"),
                               ICON("descriptor"),
                               this,
                               SLOT(slotPlugin()));

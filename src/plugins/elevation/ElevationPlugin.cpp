@@ -42,9 +42,9 @@ void ElevationPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "Utilities",
                               "Utilities",
-                              tr("Elevation"),
-                              tr("Compute elevation above ground"
-                                 " for each point"),
+                              tr("高度"),
+                              tr("对于每个点"
+                                 "计算地面以上的高度"),
                               ICON("elevation"),
                               this,
                               SLOT(slotPlugin()));

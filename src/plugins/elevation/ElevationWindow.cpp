@@ -46,9 +46,9 @@ ElevationWindow::ElevationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Points per cell"),
-                         tr("Points per cell"),
-                         tr("pt"),
+                         tr("每个单元格的点数"),
+                         tr("每个单元格的点数"),
+                         tr("点"),
                          1,
                          1000,
                          1000000,
@@ -58,8 +58,8 @@ ElevationWindow::ElevationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Cell min length"),
-                         tr("Cell min length"),
+                         tr("单元最小长度"),
+                         tr("单元最小长度"),
                          tr("%"),
                          1,
                          1,
@@ -73,7 +73,7 @@ ElevationWindow::ElevationWindow(MainWindow *mainWindow)
     settingsLayout->addStretch();
 
     // Buttons
-    applyButton_ = new QPushButton(tr("Compute"));
+    applyButton_ = new QPushButton(tr("计算"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     connect(applyButton_, SIGNAL(clicked()), this, SLOT(slotApply()));
 
@@ -91,7 +91,7 @@ ElevationWindow::ElevationWindow(MainWindow *mainWindow)
 
     // Dialog
     setLayout(mainLayout);
-    setWindowTitle(tr("Elevation"));
+    setWindowTitle(tr("高度"));
     setWindowIcon(ICON("elevation"));
     setMaximumHeight(height());
     setModal(true);

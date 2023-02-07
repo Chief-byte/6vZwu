@@ -52,38 +52,38 @@ ProjectNavigatorItemClassifications::ProjectNavigatorItemClassifications(
 
     // Tool bar buttons
     MainWindow::createToolButton(&showButton_,
-                                 tr("Show"),
-                                 tr("Make selected classifications visible"),
+                                 tr("展示"),
+                                 tr("使选定的分类可见"),
                                  ICON("eye"),
                                  this,
                                  SLOT(slotShow()));
     showButton_->setEnabled(false);
 
     MainWindow::createToolButton(&hideButton_,
-                                 tr("Hide"),
-                                 tr("Hide selected classifications"),
+                                 tr("隐藏"),
+                                 tr("隐藏选定的分类"),
                                  ICON("hide"),
                                  this,
                                  SLOT(slotHide()));
     hideButton_->setEnabled(false);
 
     MainWindow::createToolButton(&selectAllButton_,
-                                 tr("Select all"),
-                                 tr("Select all"),
+                                 tr("全选"),
+                                 tr("全选"),
                                  ICON("select_all"),
                                  this,
                                  SLOT(slotSelectAll()));
 
     MainWindow::createToolButton(&selectInvertButton_,
-                                 tr("Invert"),
-                                 tr("Invert selection"),
+                                 tr("倒置"),
+                                 tr("反转选择"),
                                  ICON("select_invert"),
                                  this,
                                  SLOT(slotSelectInvert()));
 
     MainWindow::createToolButton(&selectNoneButton_,
-                                 tr("Select none"),
-                                 tr("Select none"),
+                                 tr("选择无"),
+                                 tr("选择无"),
                                  ICON("select_none"),
                                  this,
                                  SLOT(slotSelectNone()));
@@ -365,7 +365,7 @@ void ProjectNavigatorItemClassifications::setClassifications(
     // Header
     tree_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("Visible") << tr("Class") << tr("Label");
+    labels << tr("可见的") << tr("类") << tr("标签");
     tree_->setHeaderLabels(labels);
 
     // Content

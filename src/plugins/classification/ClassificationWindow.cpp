@@ -46,9 +46,9 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Points per cell"),
-                         tr("Points per cell"),
-                         tr("pt"),
+                         tr("每个单元格的点数"),
+                         tr("每个单元格的点数"),
+                         tr("点"),
                          1,
                          1000,
                          1000000,
@@ -58,8 +58,8 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Cell min length"),
-                         tr("Cell min length"),
+                         tr("单元最小长度"),
+                         tr("单元最小长度"),
                          tr("%"),
                          1,
                          1,
@@ -70,8 +70,8 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Ground level"),
-                         tr("Ground level maximum"),
+                         tr("地面层"),
+                         tr("地平面最大值"),
                          tr("%"),
                          1,
                          1,
@@ -82,9 +82,9 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Ground angle"),
-                         tr("Ground angle"),
-                         tr("deg"),
+                         tr("地面角度"),
+                         tr("地面角度"),
+                         tr("度"),
                          1,
                          1,
                          89,
@@ -99,7 +99,7 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
     settingsLayout->addStretch();
 
     // Buttons
-    applyButton_ = new QPushButton(tr("Classify"));
+    applyButton_ = new QPushButton(tr("分类"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     connect(applyButton_, SIGNAL(clicked()), this, SLOT(slotApply()));
 
@@ -117,7 +117,7 @@ ClassificationWindow::ClassificationWindow(MainWindow *mainWindow)
 
     // Dialog
     setLayout(mainLayout);
-    setWindowTitle(tr("Classification"));
+    setWindowTitle(tr("分类"));
     setWindowIcon(ICON("soil"));
     setMaximumHeight(height());
     setModal(true);

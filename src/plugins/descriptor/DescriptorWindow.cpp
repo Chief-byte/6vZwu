@@ -48,9 +48,9 @@ DescriptorWindow::DescriptorWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Radius"),
-                         tr("Radius"),
-                         tr("pt"),
+                         tr("半径"),
+                         tr("半径"),
+                         tr("点"),
                          1,
                          10,
                          1000,
@@ -60,9 +60,9 @@ DescriptorWindow::DescriptorWindow(MainWindow *mainWindow)
                          this,
                          nullptr,
                          nullptr,
-                         tr("Voxel Size"),
-                         tr("Voxel Size"),
-                         tr("pt"),
+                         tr("体素大小"),
+                         tr("体素大小"),
+                         tr("点"),
                          1,
                          1,
                          1000,
@@ -73,13 +73,13 @@ DescriptorWindow::DescriptorWindow(MainWindow *mainWindow)
     methodRadioButton_[DescriptorAction::METHOD_PCA] =
         new QRadioButton(tr("PCA"));
     methodRadioButton_[DescriptorAction::METHOD_DISTRIBUTION] =
-        new QRadioButton(tr("Distribution"));
+        new QRadioButton(tr("分布"));
     methodRadioButton_[DescriptorAction::METHOD_PCA]->setChecked(true);
     QVBoxLayout *methodVBoxLayout = new QVBoxLayout;
     methodVBoxLayout->addWidget(methodRadioButton_[0]);
     methodVBoxLayout->addWidget(methodRadioButton_[1]);
     // methodVBoxLayout->addStretch(1);
-    QGroupBox *methodGroupBox = new QGroupBox(tr("Method"));
+    QGroupBox *methodGroupBox = new QGroupBox(tr("方法"));
     methodGroupBox->setLayout(methodVBoxLayout);
 
     // Settings layout
@@ -90,7 +90,7 @@ DescriptorWindow::DescriptorWindow(MainWindow *mainWindow)
     settingsLayout->addStretch();
 
     // Buttons
-    applyButton_ = new QPushButton(tr("Compute"));
+    applyButton_ = new QPushButton(tr("计算"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     connect(applyButton_, SIGNAL(clicked()), this, SLOT(slotApply()));
 
@@ -108,7 +108,7 @@ DescriptorWindow::DescriptorWindow(MainWindow *mainWindow)
 
     // Dialog
     setLayout(mainLayout);
-    setWindowTitle(tr("Descriptor"));
+    setWindowTitle(tr("描述符"));
     setWindowIcon(ICON("descriptor"));
     setMaximumHeight(height());
     setModal(true);

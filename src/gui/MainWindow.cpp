@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
     LOG_DEBUG(<< "Called.");
 
     // Status bar
-    statusBar()->showMessage(tr("Ready"));
+    statusBar()->showMessage(tr("就绪"));
 
     // Menu
     projectFilePlugin_ = new ProjectFilePlugin();
@@ -93,8 +93,8 @@ MainWindow::MainWindow(QWidget *parent)
     createAction(&actionExit_,
                  "File",
                  "",
-                 tr("E&xit"),
-                 tr("Exit the application"),
+                 tr("退出"),
+                 tr("退出应用程序"),
                  QIcon(),
                  this,
                  SLOT(close()));
@@ -139,7 +139,7 @@ QSize MainWindow::sizeHint() const
 
 void MainWindow::showError(const char *message)
 {
-    (void)QMessageBox::critical(this, tr("Error"), message);
+    (void)QMessageBox::critical(this, tr("错误"), message);
 }
 
 void MainWindow::setWindowTitle(const QString &path)

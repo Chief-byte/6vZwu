@@ -96,7 +96,7 @@ HeightMapWindow::HeightMapWindow(MainWindow *mainWindow,
             this,
             SLOT(previewChanged(int)));
 
-    applyButton_ = new QPushButton(tr("Apply and save"));
+    applyButton_ = new QPushButton(tr("应用并保存"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     applyButton_->setDisabled(true);
@@ -104,17 +104,17 @@ HeightMapWindow::HeightMapWindow(MainWindow *mainWindow,
 
     // Layout
     QGridLayout *groupBoxLayout = new QGridLayout;
-    groupBoxLayout->addWidget(new QLabel(tr("N colors")), 0, 0);
+    groupBoxLayout->addWidget(new QLabel(tr("N种颜色")), 0, 0);
     groupBoxLayout->addWidget(colorCountSpinBox_, 0, 1);
-    groupBoxLayout->addWidget(new QLabel(tr("Colormap")), 1, 0);
+    groupBoxLayout->addWidget(new QLabel(tr("颜色图")), 1, 0);
     groupBoxLayout->addWidget(colormapComboBox_, 1, 1);
-    groupBoxLayout->addWidget(new QLabel(tr("Source")), 2, 0);
+    groupBoxLayout->addWidget(new QLabel(tr("源")), 2, 0);
     groupBoxLayout->addWidget(sourceComboBox_, 2, 1);
     groupBoxLayout->setColumnStretch(1, 1);
 
     QHBoxLayout *hbox = new QHBoxLayout;
     hbox->addWidget(previewCheckBox_);
-    hbox->addWidget(new QLabel(tr("Preview")));
+    hbox->addWidget(new QLabel(tr("预览")));
     hbox->addStretch();
     hbox->addWidget(applyButton_, 0, Qt::AlignRight);
 

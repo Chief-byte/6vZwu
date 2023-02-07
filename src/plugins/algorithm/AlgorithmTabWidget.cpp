@@ -45,7 +45,7 @@ AlgorithmTabWidget::AlgorithmTabWidget(MainWindow *mainWindow)
 
     treeWidget_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("Algorithm") << tr("Id");
+    labels << tr("算法") << tr("编号");
     treeWidget_->setHeaderLabels(labels);
     treeWidget_->setColumnHidden(COLUMN_ID, true);
 

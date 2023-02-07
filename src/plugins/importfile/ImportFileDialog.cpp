@@ -38,14 +38,14 @@
 ImportFileDialog::ImportFileDialog(MainWindow *mainWindow) : QDialog(mainWindow)
 {
     // Widgets
-    QLabel *description = new QLabel(tr("This operation may modify"
-                                        " the input file."));
+    QLabel *description = new QLabel(tr("此操作可能会修改"
+                                        " 输入文件。"));
 
-    description->setToolTip(tr("The file size may get bigger.\n"
-                               "Unknown User data will be lost.\n"
-                               "Some values will be normalized."));
+    description->setToolTip(tr("文件大小可能会变大。\n"
+                               "未知用户数据将丢失。\n"
+                               "一些值将被归一化。"));
 
-    QGroupBox *options = new QGroupBox(tr("Options"));
+    QGroupBox *options = new QGroupBox(tr("选项"));
 
     centerCheckBox_ = new QCheckBox;
     centerCheckBox_->setChecked(true);
@@ -54,19 +54,19 @@ ImportFileDialog::ImportFileDialog(MainWindow *mainWindow) : QDialog(mainWindow)
     convertCheckBox_->setChecked(true);
     convertCheckBox_->setEnabled(false);
 
-    acceptButton_ = new QPushButton(tr("Import"));
+    acceptButton_ = new QPushButton(tr("导入"));
     connect(acceptButton_, SIGNAL(clicked()), this, SLOT(slotAccept()));
 
-    rejectButton_ = new QPushButton(tr("Cancel"));
+    rejectButton_ = new QPushButton(tr("取消"));
     connect(rejectButton_, SIGNAL(clicked()), this, SLOT(slotReject()));
 
     // Layout
     QGridLayout *optionsLayout = new QGridLayout;
     int row = 0;
-    optionsLayout->addWidget(new QLabel(tr("Center offset")), row, 0);
+    optionsLayout->addWidget(new QLabel(tr("中心偏移")), row, 0);
     optionsLayout->addWidget(centerCheckBox_, row, 1);
     row++;
-    optionsLayout->addWidget(new QLabel(tr("Convert to v1.4+")), row, 0);
+    optionsLayout->addWidget(new QLabel(tr("转换为 v1.4+")), row, 0);
     optionsLayout->addWidget(convertCheckBox_, row, 1);
     row++;
     options->setLayout(optionsLayout);
@@ -87,7 +87,7 @@ ImportFileDialog::ImportFileDialog(MainWindow *mainWindow) : QDialog(mainWindow)
     setLayout(dialogLayout);
 
     // Window
-    setWindowTitle(tr("Import File"));
+    setWindowTitle(tr("导入文件"));
     setWindowIcon(ICON("import_file"));
     setMaximumWidth(width());
     setMaximumHeight(height());

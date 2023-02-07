@@ -76,10 +76,10 @@ AlgorithmWindow::AlgorithmWindow(MainWindow *mainWindow)
     progressBarLayout->setContentsMargins(0, 0, 0, 0);
 
     // Add apply and cancel buttons.
-    acceptButton_ = new QPushButton(tr("Apply"));
+    acceptButton_ = new QPushButton(tr("应用"));
     connect(acceptButton_, SIGNAL(clicked()), this, SLOT(slotAccept()));
 
-    rejectButton_ = new QPushButton(tr("Cancel"));
+    rejectButton_ = new QPushButton(tr("取消"));
     connect(rejectButton_, SIGNAL(clicked()), this, SLOT(slotReject()));
 
     QHBoxLayout *dialogButtons = new QHBoxLayout;
@@ -99,7 +99,7 @@ AlgorithmWindow::AlgorithmWindow(MainWindow *mainWindow)
     setLayout(dialogLayout);
 
     // Create our dialog.
-    setWindowTitle(tr("Algorithm"));
+    setWindowTitle(tr("算法"));
     setWindowIcon(ICON("algorithm"));
     setModal(true);
 

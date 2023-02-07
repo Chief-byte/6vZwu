@@ -32,7 +32,7 @@
 #include <QProgressBar>
 #include <QProgressDialog>
 
-#define IMPORT_PLUGIN_FILTER "LAS (LASer) File (*.las)"
+#define IMPORT_PLUGIN_FILTER "LAS (LASer) 文件 (*.las)"
 #define ICON(name) (ThemeIcon(":/importfile/", name))
 
 ImportFilePlugin::ImportFilePlugin() : mainWindow_(nullptr)
@@ -46,8 +46,8 @@ void ImportFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(&importFileAction_,
                               "File",
                               "File Import/Export",
-                              tr("Import..."),
-                              tr("Import new point cloud dataset"),
+                              tr("导入..."),
+                              tr("导入新的点云数据集"),
                               ICON("import_file"),
                               this,
                               SLOT(slotImportFile()));
@@ -83,7 +83,7 @@ void ImportFilePlugin::import(MainWindow *mainWindow)
 
 static void importPluginDialog(MainWindow *mainWindow)
 {
-    QFileDialog dialog(mainWindow, QObject::tr("Import File"));
+    QFileDialog dialog(mainWindow, QObject::tr("导入文件"));
     dialog.setNameFilter(QObject::tr(IMPORT_PLUGIN_FILTER));
 
     if (dialog.exec() == QDialog::Rejected)
@@ -148,9 +148,9 @@ static bool importPluginCreateIndex(const QString &path,
     // Create modal progress dialog with custom progress bar.
     // Custom progress bar allows to display percentage with fractional part.
     QProgressDialog progressDialog(mainWindow);
-    progressDialog.setWindowTitle(QObject::tr("Create Index"));
+    progressDialog.setWindowTitle(QObject::tr("创建索引"));
     progressDialog.setWindowModality(Qt::WindowModal);
-    progressDialog.setCancelButtonText(QObject::tr("&Cancel"));
+    progressDialog.setCancelButtonText(QObject::tr("&取消"));
     progressDialog.setMinimumDuration(0);
 
     QProgressBar *progressBar = new QProgressBar(&progressDialog);

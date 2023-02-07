@@ -35,7 +35,7 @@ LoggerWindow::LoggerWindow(MainWindow *mainWindow)
 
     // Dock
     setWidget(textEdit_);
-    setWindowTitle(tr("Logger"));
+    setWindowTitle(tr("记录器"));
     setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea |
                     Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);
     mainWindow_->addDockWidget(Qt::BottomDockWidgetArea, this);
