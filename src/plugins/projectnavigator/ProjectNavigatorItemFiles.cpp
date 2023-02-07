@@ -407,7 +407,7 @@ void ProjectNavigatorItemFiles::setDatasets(const Datasets &datasets)
     // Header
     tree_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("可见的") << tr("编号") << tr("标签") << tr("日期");
+    labels << tr("可见") << tr("编号") << tr("标签") << tr("日期");
     tree_->setHeaderLabels(labels);
 
     // Content

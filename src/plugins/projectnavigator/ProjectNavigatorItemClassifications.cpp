@@ -365,7 +365,7 @@ void ProjectNavigatorItemClassifications::setClassifications(
     // Header
     tree_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("可见的") << tr("类") << tr("标签");
+    labels << tr("可见") << tr("类") << tr("标签");
     tree_->setHeaderLabels(labels);
 
     // Content

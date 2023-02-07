@@ -403,7 +403,7 @@ void ProjectNavigatorItemLayers::setLayers(const Layers &layers)
     // Header
     tree_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("可见的") << tr("编号") << tr("标签");
+    labels << tr("可见") << tr("编号") << tr("标签");
     tree_->setHeaderLabels(labels);
 
     // Content
