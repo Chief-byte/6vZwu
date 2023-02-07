@@ -44,8 +44,8 @@ void LoggerPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "File",
                               "File Properties",
-                              tr("Logger"),
-                              tr("Show Logger Window"),
+                              tr("记录器"),
+                              tr("显示记录器窗口"),
                               ICON("logger"),
                               this,
                               SLOT(slotPlugin()));

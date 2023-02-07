@@ -39,8 +39,8 @@ void SettingsPlugin::initialize(MainWindow *mainWindow)
     mainWindow_->createAction(nullptr,
                               "File",
                               "File Properties",
-                              tr("Settings"),
-                              tr("Show settings"),
+                              tr("设置"),
+                              tr("显示设置"),
                               ICON("settings"),
                               this,
                               SLOT(slotPlugin()));
