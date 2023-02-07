@@ -43,18 +43,18 @@ SettingsColorWidget::SettingsColorWidget(MainWindow *mainWindow)
     // Fog
     fogCheckBox_ = new QCheckBox;
     fogCheckBox_->setChecked(settings_.isFogEnabled());
-    fogCheckBox_->setToolTip(tr("Reduce intensity with increasing distance"));
-    fogCheckBox_->setText(tr("Fog"));
+    fogCheckBox_->setToolTip(tr("随着距离的增加来降低强度"));
+    fogCheckBox_->setText(tr("雾"));
     connect(fogCheckBox_,
             SIGNAL(stateChanged(int)),
             this,
             SLOT(slotSetFogEnabled(int)));
 
     // Color
-    colorFgButton_ = new QPushButton(tr("Foreground"));
+    colorFgButton_ = new QPushButton(tr("前景"));
     connect(colorFgButton_, SIGNAL(clicked()), this, SLOT(slotSetColorFg()));
 
-    colorBgButton_ = new QPushButton(tr("Background"));
+    colorBgButton_ = new QPushButton(tr("背景"));
     connect(colorBgButton_, SIGNAL(clicked()), this, SLOT(slotSetColorBg()));
 
     QHBoxLayout *colorLayout = new QHBoxLayout;
@@ -77,7 +77,7 @@ SettingsColorWidget::SettingsColorWidget(MainWindow *mainWindow)
             SLOT(slotSetPointSize(int)));
 
     QHBoxLayout *pointSizeLayout = new QHBoxLayout;
-    pointSizeLayout->addWidget(new QLabel(tr("Point Size")));
+    pointSizeLayout->addWidget(new QLabel(tr("点大小")));
     pointSizeLayout->addWidget(pointSizeSlider_);
 
     // Layout

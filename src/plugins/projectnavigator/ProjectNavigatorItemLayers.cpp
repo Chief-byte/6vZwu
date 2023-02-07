@@ -51,54 +51,54 @@ ProjectNavigatorItemLayers::ProjectNavigatorItemLayers(MainWindow *mainWindow,
 
     // Tool bar buttons
     MainWindow::createToolButton(&addButton_,
-                                 tr("Add"),
-                                 tr("Add new layers"),
+                                 tr("添加"),
+                                 tr("添加新图层"),
                                  THEME_ICON("add"),
                                  this,
                                  SLOT(slotAdd()));
     addButton_->setEnabled(false);
 
     MainWindow::createToolButton(&deleteButton_,
-                                 tr("Remove"),
-                                 tr("Remove selected layers"),
+                                 tr("删除"),
+                                 tr("删除选定图层"),
                                  THEME_ICON("remove"),
                                  this,
                                  SLOT(slotDelete()));
     deleteButton_->setEnabled(false);
 
     MainWindow::createToolButton(&showButton_,
-                                 tr("Show"),
-                                 tr("Make selected layers visible"),
+                                 tr("展示"),
+                                 tr("使选定图层可见"),
                                  ICON("eye"),
                                  this,
                                  SLOT(slotShow()));
     showButton_->setEnabled(false);
 
     MainWindow::createToolButton(&hideButton_,
-                                 tr("Hide"),
-                                 tr("Hide selected layers"),
+                                 tr("隐藏"),
+                                 tr("隐藏选定图层"),
                                  ICON("hide"),
                                  this,
                                  SLOT(slotHide()));
     hideButton_->setEnabled(false);
 
     MainWindow::createToolButton(&selectAllButton_,
-                                 tr("Select all"),
-                                 tr("Select all"),
+                                 tr("全选"),
+                                 tr("全选"),
                                  ICON("select_all"),
                                  this,
                                  SLOT(slotSelectAll()));
 
     MainWindow::createToolButton(&selectInvertButton_,
-                                 tr("Invert"),
-                                 tr("Invert selection"),
+                                 tr("倒置"),
+                                 tr("反转选择"),
                                  ICON("select_invert"),
                                  this,
                                  SLOT(slotSelectInvert()));
 
     MainWindow::createToolButton(&selectNoneButton_,
-                                 tr("Select none"),
-                                 tr("Select none"),
+                                 tr("选择无"),
+                                 tr("选择无"),
                                  ICON("select_none"),
                                  this,
                                  SLOT(slotSelectNone()));
@@ -403,7 +403,7 @@ void ProjectNavigatorItemLayers::setLayers(const Layers &layers)
     // Header
     tree_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("Visible") << tr("Id") << tr("Label");
+    labels << tr("可见的") << tr("编号") << tr("标签");
     tree_->setHeaderLabels(labels);
 
     // Content

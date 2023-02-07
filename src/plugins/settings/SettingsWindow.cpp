@@ -36,11 +36,11 @@ SettingsWindow::SettingsWindow(MainWindow *mainWindow)
 
     // Tab
     tabWidget_ = new ToolTabWidget;
-    tabWidget_->addTab(settingsColorWidget_, ICON("brush"), tr("Brush"));
+    tabWidget_->addTab(settingsColorWidget_, ICON("brush"), tr("笔刷"));
 
     // Dock
     setWidget(tabWidget_);
-    setWindowTitle(tr("Settings"));
+    setWindowTitle(tr("设置"));
     setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     mainWindow_->addDockWidget(Qt::RightDockWidgetArea, this);
 }

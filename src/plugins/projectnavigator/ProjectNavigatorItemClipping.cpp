@@ -83,7 +83,7 @@ ProjectNavigatorItemClipping::ProjectNavigatorItemClipping(
                               0,
                               100);
 
-    resetButton_ = new QPushButton(tr("&Reset"), this);
+    resetButton_ = new QPushButton(tr("&重置"), this);
     connect(resetButton_, SIGNAL(clicked()), this, SLOT(reset()));
 
     // Layout

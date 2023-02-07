@@ -48,7 +48,7 @@ ProjectNavigatorTree::ProjectNavigatorTree(MainWindow *mainWindow)
 
     treeWidget_->setColumnCount(COLUMN_LAST);
     QStringList labels;
-    labels << tr("Color") << tr("Filter") << tr("Item") << tr("Id");
+    labels << tr("颜色") << tr("筛选") << tr("项目") << tr("编号");
     treeWidget_->setHeaderLabels(labels);
     treeWidget_->setColumnHidden(COLUMN_ID, true);
 
