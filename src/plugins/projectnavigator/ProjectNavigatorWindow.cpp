@@ -42,44 +42,44 @@ ProjectNavigatorWindow::ProjectNavigatorWindow(MainWindow *mainWindow)
 {
     // Tab
     items_.push_back(
-        new ProjectNavigatorItemFiles(mainWindow_, ICON("file"), tr("Files")));
+        new ProjectNavigatorItemFiles(mainWindow_, ICON("file"), tr("文件")));
 
     items_.push_back(new ProjectNavigatorItemLayers(mainWindow_,
                                                     ICON("layers"),
-                                                    tr("Layers")));
+                                                    tr("图层")));
 
     items_.push_back(
         new ProjectNavigatorItemClassifications(mainWindow_,
                                                 ICON("classification"),
-                                                tr("Classifications")));
+                                                tr("分类")));
 
     items_.push_back(
-        new ProjectNavigatorItemColor(mainWindow_, ICON("color"), tr("Color")));
+        new ProjectNavigatorItemColor(mainWindow_, ICON("color"), tr("颜色")));
 
     items_.push_back(new ProjectNavigatorItemIntensity(mainWindow_,
                                                        ICON("intensity"),
-                                                       tr("Intensity")));
+                                                       tr("强度")));
 
     items_.push_back(new ProjectNavigatorItemReturnNumber(mainWindow_,
                                                           ICON("return_number"),
-                                                          tr("Return number")));
+                                                          tr("返回号码")));
 
     items_.push_back(new ProjectNavigatorItemElevation(mainWindow_,
                                                        ICON("elevation_filter"),
-                                                       tr("Elevation")));
+                                                       tr("高度")));
 
     items_.push_back(new ProjectNavigatorItemDensity(mainWindow_,
                                                      ICON("descriptor_filter"),
-                                                     tr("Density")));
+                                                     tr("密度")));
 
     items_.push_back(
         new ProjectNavigatorItemDescriptor(mainWindow_,
                                            ICON("descriptor_filter"),
-                                           tr("Descriptor")));
+                                           tr("描述符")));
 
     items_.push_back(new ProjectNavigatorItemClipping(mainWindow_,
                                                       ICON("clip_filter"),
-                                                      tr("Clip filter")));
+                                                      tr("剪辑过滤器")));
 
     // Tabs
     menu_ = new ProjectNavigatorTree(mainWindow_);
@@ -90,7 +90,7 @@ ProjectNavigatorWindow::ProjectNavigatorWindow(MainWindow *mainWindow)
 
     // Dock
     setWidget(menu_);
-    setWindowTitle(tr("Data Browser"));
+    setWindowTitle(tr("数据浏览器"));
     setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     mainWindow_->addDockWidget(Qt::RightDockWidgetArea, this);
 }
