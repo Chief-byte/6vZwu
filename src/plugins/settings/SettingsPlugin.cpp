@@ -37,8 +37,8 @@ void SettingsPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "File",
-                              "File Properties",
+                              "文件",
+                              "文件属性",
                               tr("设置"),
                               tr("显示设置"),
                               ICON("settings"),

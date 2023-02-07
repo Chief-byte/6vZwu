@@ -40,8 +40,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(&actionProjectNew_,
-                              "File",
-                              "File Project",
+                              "文件",
+                              "文件项目",
                               tr("&新项目"),
                               tr("创建新项目"),
                               ICON("create"),
@@ -49,8 +49,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
                               SLOT(slotProjectNew()));
 
     mainWindow_->createAction(&actionProjectOpen_,
-                              "File",
-                              "File Project",
+                              "文件",
+                              "文件项目",
                               tr("&打开项目..."),
                               tr("打开新项目"),
                               ICON("opened_folder"),
@@ -58,8 +58,8 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
                               SLOT(slotProjectOpen()));
 
     mainWindow_->createAction(&actionProjectSave_,
-                              "File",
-                              "File Project",
+                              "文件",
+                              "文件项目",
                               tr("&保存项目"),
                               tr("保存项目"),
                               ICON("save"),
@@ -67,15 +67,15 @@ void ProjectFilePlugin::initialize(MainWindow *mainWindow)
                               SLOT(slotProjectSave()));
 
     mainWindow_->createAction(&actionProjectSaveAs_,
-                              "File",
-                              "File Project",
+                              "文件",
+                              "文件项目",
                               tr("将项目&另存为..."),
                               tr("将项目另存为"),
                               ICON("save_as"),
                               this,
                               SLOT(slotProjectSaveAs()));
 
-    mainWindow_->hideToolBar("File Project");
+    mainWindow_->hideToolBar("文件项目");
 }
 
 void ProjectFilePlugin::slotProjectNew()
@@ -157,8 +157,8 @@ bool ProjectFilePlugin::projectClose()
     if (mainWindow_->editor().hasUnsavedChanges())
     {
         QMessageBox msgBox;
-        msgBox.setText("The document has been modified.");
-        msgBox.setInformativeText("Do you want to save your changes?");
+        msgBox.setText("该文档已被修改。");
+        msgBox.setInformativeText("要保存更改吗？");
         msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard |
                                   QMessageBox::Cancel);
         msgBox.setDefaultButton(QMessageBox::Save);

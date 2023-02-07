@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Exit
     createAction(&actionExit_,
-                 "File",
+                 "文件",
                  "",
                  tr("退出"),
                  tr("退出应用程序"),

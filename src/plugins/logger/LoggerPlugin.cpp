@@ -42,8 +42,8 @@ void LoggerPlugin::initialize(MainWindow *mainWindow)
     }
 
     mainWindow_->createAction(nullptr,
-                              "File",
-                              "File Properties",
+                              "文件",
+                              "文件属性",
                               tr("记录器"),
                               tr("显示记录器窗口"),
                               ICON("logger"),

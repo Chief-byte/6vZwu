@@ -37,8 +37,8 @@ void ProjectNavigatorPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "File",
-                              "File Properties",
+                              "文件",
+                              "文件属性",
                               tr("数据浏览器"),
                               tr("显示数据浏览器"),
                               ICON("data_browser"),

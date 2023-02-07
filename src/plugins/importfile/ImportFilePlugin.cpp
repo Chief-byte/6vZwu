@@ -44,15 +44,15 @@ void ImportFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(&importFileAction_,
-                              "File",
-                              "File Import/Export",
+                              "文件",
+                              "文件导入/导出",
                               tr("导入..."),
                               tr("导入新的点云数据集"),
                               ICON("import_file"),
                               this,
                               SLOT(slotImportFile()));
 
-    mainWindow_->hideToolBar("File Import/Export");
+    mainWindow_->hideToolBar("文件导入/导出");
 }
 
 void ImportFilePlugin::slotImportFile()

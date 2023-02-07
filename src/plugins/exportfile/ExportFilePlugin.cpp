@@ -41,8 +41,8 @@ void ExportFilePlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(&exportFileAction_,
-                              "File",
-                              "File Import/Export",
+                              "文件",
+                              "文件导入/导出",
                               tr("导出..."),
                               tr("导出点云"),
                               ICON("export_file"),

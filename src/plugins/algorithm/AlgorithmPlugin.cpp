@@ -37,8 +37,8 @@ void AlgorithmPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "File",
-                              "File Properties",
+                              "文件",
+                              "文件属性",
                               tr("算法"),
                               tr("运行算法"),
                               ICON("algorithm"),
