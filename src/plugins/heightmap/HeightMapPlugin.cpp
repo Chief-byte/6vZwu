@@ -37,8 +37,8 @@ void HeightMapPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "Modifiers",
-                              "Modifiers",
+                              "修饰",
+                              "修饰",
                               tr("高度图"),
                               tr("计算高度图"),
                               ICON("height_map"),

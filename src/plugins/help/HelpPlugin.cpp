@@ -36,10 +36,10 @@ void HelpPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(&aboutAction_,
-                              "Help",
+                              "帮助",
                               "",
-                              tr("About 3D Forest"),
-                              tr("About this application"),
+                              tr("关于 3D Forest"),
+                              tr("关于应用程序"),
                               THEME_ICON("question"),
                               this,
                               SLOT(slotAbout()));

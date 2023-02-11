@@ -40,8 +40,8 @@ void DescriptorPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "Utilities",
-                              "Utilities",
+                              "实用工具",
+                              "实用工具",
                               tr("描述符"),
                               tr("计算每个点的描述符"),
                               ICON("descriptor"),

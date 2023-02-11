@@ -40,8 +40,8 @@ void ClassificationPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "Utilities",
-                              "Utilities",
+                              "实用工具",
+                              "实用工具",
                               tr("分类"),
                               tr("分类点到地面和未分配的点"),
                               ICON("soil"),

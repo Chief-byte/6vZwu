@@ -38,8 +38,8 @@ void DensityPlugin::initialize(MainWindow *mainWindow)
     mainWindow_ = mainWindow;
 
     mainWindow_->createAction(nullptr,
-                              "Utilities",
-                              "Utilities",
+                              "实用工具",
+                              "实用工具",
                               tr("密度"),
                               tr("计算每个点周围的密度"),
                               ICON("density"),
