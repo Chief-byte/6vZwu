@@ -29,7 +29,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#define LOG_MODULE_NAME "ClassificationWindow"
+#define LOG_MODULE_NAME "TochmWindow"
 #include <Log.hpp>
 
 #define ICON(name) (ThemeIcon(":/tochm/", name))
