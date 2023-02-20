@@ -18,16 +18,18 @@
 */
 
 /** @file ClassificationWindow.cpp */
-#include <TochmWindow.hpp>
+#include <ImportFilePlugin.cpp>
 #include <MainWindow.hpp>
 #include <ProgressDialog.hpp>
-#include <SliderWidget.hpp>
-#include <ThemeIcon.hpp>
-#include <ImportFilePlugin.cpp>
-#include<windows.h>
+#include <QCoreApplication>
 #include <QHBoxLayout>
+#include <QProcess>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <SliderWidget.hpp>
+#include <ThemeIcon.hpp>
+#include <TochmWindow.hpp>
+#include <windows.h>
 
 #define LOG_MODULE_NAME "ClassificationWindow"
 #include <Log.hpp>
@@ -129,10 +131,11 @@ void TochmWindow::slotApply()
 
     mainWindow_->suspendThreads();
 
-    //size_t pointsPerCell = static_cast<size_t>(nPointsSlider_->value());
-    //double cellLengthMinPercent = static_cast<double>(lengthSlider_->value());
-    //double groundErrorPercent = static_cast<double>(rangeSlider_->value());
-    //double angleDeg = static_cast<double>(angleSlider_->value());
+    // size_t pointsPerCell = static_cast<size_t>(nPointsSlider_->value());
+    // double cellLengthMinPercent =
+    // static_cast<double>(lengthSlider_->value()); double groundErrorPercent =
+    // static_cast<double>(rangeSlider_->value()); double angleDeg =
+    // static_cast<double>(angleSlider_->value());
 
     try
     {
@@ -142,9 +145,26 @@ void TochmWindow::slotApply()
         //                            angleDeg);
         // ProgressDialog::run(mainWindow_,
         //                     "Computing Classification", &tochm_);
-        WinExec("lasground_new -cpu64 -i \"C:\\Users\\Chief\\3DForest-Fork\\base_cloud.las\" -wilderness -hyper_fine -compute_height -replace_z -odir \"..\\test\" -o \"123.las\"",SW_HIDE );
-        
-        importPluginFile("..\\test\\123.las",mainWindow_);
+        // WinExec("lasground_new -cpu64 -i
+        // \"C:\\Users\\Chief\\3DForest-Fork\\base_cloud.las\" -wilderness
+        // -hyper_fine -compute_height -replace_z -odir \"..\\test\" -o
+        // \"123.las\"",SW_HIDE );
+        QProcess prc;
+        QString prgpath = "..\\LAStools\\bin\\lasground_new.exe";
+        QStringList prgargs;
+        prgargs << "-cpu64"
+                << "-i"
+                << "C:\\Users\\Chief\\3DForest-Fork\\base_cloud.las"
+                << "-wilderness"
+                << "-hyper_fine"
+                << "-compute_height"
+                << "-replace_z"
+                << "-odir"
+                << "..\\test\\"
+                << "-o"
+                << "123.las";
+        prc.startDetached(prgpath, prgargs);
+        importPluginFile("..\\test\\123.las", mainWindow_);
     }
     catch (std::exception &e)
     {
