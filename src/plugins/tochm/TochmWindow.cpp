@@ -23,7 +23,7 @@
 #include <ProgressDialog.hpp>
 #include <SliderWidget.hpp>
 #include <ThemeIcon.hpp>
-
+#include <ImportFilePlugin.cpp>
 #include<windows.h>
 #include <QHBoxLayout>
 #include <QPushButton>
@@ -99,7 +99,7 @@ TochmWindow::TochmWindow(MainWindow *mainWindow)
     settingsLayout->addStretch();
 
     // Buttons
-    applyButton_ = new QPushButton(tr("归一化"));
+    applyButton_ = new QPushButton(tr("应用"));
     applyButton_->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     connect(applyButton_, SIGNAL(clicked()), this, SLOT(slotApply()));
 
@@ -117,7 +117,7 @@ TochmWindow::TochmWindow(MainWindow *mainWindow)
 
     // Dialog
     setLayout(mainLayout);
-    setWindowTitle(tr("归一化"));
+    setWindowTitle(tr("冠层高度模型"));
     setWindowIcon(ICON("chm"));
     setMaximumHeight(height());
     setModal(true);
@@ -142,7 +142,9 @@ void TochmWindow::slotApply()
         //                            angleDeg);
         // ProgressDialog::run(mainWindow_,
         //                     "Computing Classification", &tochm_);
-        WinExec("lasground_new -cpu64 -i \"C:\\Users\\Chief\\3DForest-Fork\\base_cloud.las\" -wilderness -hyper_fine -compute_height -replace_z -odir \"C:\\Users\\Chief\\3DForest-Fork\" -o \"123.las\"",SW_HIDE );
+        WinExec("lasground_new -cpu64 -i \"C:\\Users\\Chief\\3DForest-Fork\\base_cloud.las\" -wilderness -hyper_fine -compute_height -replace_z -odir \"..\\test\" -o \"123.las\"",SW_HIDE );
+        
+        importPluginFile("..\\test\\123.las",mainWindow_);
     }
     catch (std::exception &e)
     {
