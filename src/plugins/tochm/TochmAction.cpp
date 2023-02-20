@@ -22,7 +22,7 @@
 #include <TochmAction.hpp>
 #include <Editor.hpp>
 
-#define LOG_MODULE_NAME "ClassificationAction"
+#define LOG_MODULE_NAME "TochmAction"
 #include <Log.hpp>
 
 TochmAction::TochmAction(Editor *editor)

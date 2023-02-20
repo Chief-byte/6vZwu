@@ -24,7 +24,7 @@
 #include <MainWindow.hpp>
 #include <ThemeIcon.hpp>
 
-#define LOG_MODULE_NAME "ClassificationPlugin"
+#define LOG_MODULE_NAME "TochmPlugin"
 #include <Log.hpp>
 
 #define ICON(name) (ThemeIcon(":/tochm/", name))
